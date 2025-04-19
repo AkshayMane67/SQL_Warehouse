@@ -21,7 +21,6 @@ Create table bronze.crm_cust_info(
 		cst_marital_status nvarchar(250),
 		cst_gndr nvarchar(50),
 		cst_create_date Date
-
 );
 GO
 
@@ -35,22 +34,21 @@ CREATE TABLE bronze.crm_prd_info(
 		prd_line VARCHAR(50),
 		prd_start_dt DATE,
 		prd_end_dt DATE
-
 );
 GO
 
 if OBJECT_ID('bronze.crm_sales_details','U') IS NOT NULL
 	drop table bronze.crm_sales_details;
-CREATE TABLE bronze.crm_sales_details(
-sls_ord_num NVARCHAR(100),
-sls_prd_key NVARCHAR(100),
-sls_cust_id INT,
-sls_order_dt INT,
-sls_ship_dt INT,
-sls_due_dt INT,
-sls_sales INT,
-sls_quantity INT,
-sls_price INT
+		CREATE TABLE bronze.crm_sales_details(
+	sls_ord_num NVARCHAR(100),
+	sls_prd_key NVARCHAR(100),
+	sls_cust_id INT,
+	sls_order_dt INT,
+	sls_ship_dt INT,
+	sls_due_dt INT,
+	sls_sales INT,
+	sls_quantity INT,
+	sls_price INT
 
 );
 GO
